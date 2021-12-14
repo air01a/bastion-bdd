@@ -26,7 +26,6 @@ Step to install :
 
 3 - Configure Cognito 
 
-Follow the procedure : https://docs.google.com/document/d/1yoB4jMiEt99_tb5kBUBu0PS0Cvg3qBgGxTLwOe-nZXg/edit
 
 4 - Build the docker image
 
