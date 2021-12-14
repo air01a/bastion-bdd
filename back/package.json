@@ -1,0 +1,69 @@
+{
+  "name": "api-test",
+  "version": "1.0.0",
+  "description": "test api",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "autoprefixer": "^10.4.0",
+    "babel-eslint": "^10.1.0",
+    "chai": "4.1.1",
+    "chai-http": "^3.0.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "mocha": "3.5.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "core-js": "^3.6.5",
+    "cron": "^1.8.2",
+    "generate-password": "^1.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwk-to-pem": "^2.0.5",
+    "knex": "^0.13.0",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.2.0",
+    "koa-mount": "^4.0.0",
+    "koa-router": "^10.1.1",
+    "koa-static": "^5.0.0",
+    "pg": "^8.7.1",
+    "pm2": "^5.1.2",
+    "prompt-sync": "^4.2.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
