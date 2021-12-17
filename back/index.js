@@ -2,7 +2,7 @@ import Koa from 'koa';
 import Bodyparser from 'koa-bodyparser';
 const app = new Koa();
 
-/*
+
 import https from 'https';
 import http from 'http';
 import path from 'path';
@@ -20,7 +20,7 @@ var config = {
    },
 };
 
-*/
+
 import { router } from './routes/route.mjs';
 import { adminRouter } from './routes/admin.mjs';
 
@@ -43,10 +43,10 @@ app.use(static_router.routes());
 app.use(adminRouter.routes());
 app.use(router.routes());
 
-app.listen(80, function () {
-   console.log('Server running on https://localhost:80')
-});
-/*const serverCallback = app.callback();
+//app.listen(80, function () {
+//   console.log('Server running on https://localhost:80')
+//});
+const serverCallback = app.callback();
 try {
    var httpsServer = https.createServer(config.https.options, serverCallback);
    httpsServer
@@ -61,4 +61,4 @@ try {
 }
 catch (ex) {
    console.error('Failed to start HTTPS server\n', ex, (ex && ex.stack));
-}*/
+}
