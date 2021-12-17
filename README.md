@@ -1,6 +1,6 @@
 # Bastion-BDD
 
-Bastion to manage rights on BDD
+Bastion to manage rights on BDD (Koa for back, vuejs for front)
 
 ## Usage
 
