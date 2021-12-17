@@ -27,9 +27,9 @@ Step to install :
 3 - Configure Cognito 
 
 
-4 - Build the docker image
+4 - Build the docker image (docker build -t bastion-bdd .)
 
-5 - Run with environnement variables : 
+5 - Run with environnement variables (docker run --env-file ./env -p 443:443 bastion-bdd): 
 
 config for bastion datbase (created in step1)
 
