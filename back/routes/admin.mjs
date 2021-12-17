@@ -51,7 +51,7 @@ adminRouter.put('/api/users', async (ctx, next) => {
     try {
 
       if (validateEmail(ctx.request.body.email)) {
-        const response = await create_user(ctx.request.body.email);
+        const response = await create_user(ctx.request.body.email, ctx.request.body.isAdmin);
 
         ctx.body = JSON.stringify(response);
       } else {
@@ -71,7 +71,7 @@ adminRouter.post('/api/users/:id', async (ctx, next) => {
   if (ctx.state.is_admin) {
     try {
       if (validateEmail(ctx.request.body.email)) {
-        const response = await modify_user(ctx.params.id, ctx.request.body.email);
+        const response = await modify_user(ctx.params.id, ctx.request.body.email, ctx.request.body.isAdmin);
 
         ctx.body = JSON.stringify(response);
       } else {

@@ -8,6 +8,7 @@ var key;
 const cognito_key_url = 'https://cognito-idp.' + process.env.AWSREGION + ".amazonaws.com/" + process.env.AWSPOOLID + "/.well-known/jwks.json";
 axios.get(cognito_key_url).then((res) => {
     key = res.data;
+    console.log("Get Key Aws : OK");
 });
 
 
@@ -22,7 +23,7 @@ var parseJwt = function (key, token) {
             (decodedToken.identities !== undefined) ? googleId = decodedToken.identities[0].providerName + "_" + decodedToken.identities[0].userId : googleId = decodedToken.username;
             user_id = { email: email, googleId: googleId };
         } else {
-            console.log(err);
+            console.log("error dcoding token", err);
             return null;
         }
     });
@@ -39,6 +40,7 @@ export function validate_token(token) {
         });
         return user_id;
     } catch (e) {
+        console.log(e);
         return null; // error in the above string (in this case, yes)!
     }
 }
